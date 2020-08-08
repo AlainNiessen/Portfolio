@@ -355,6 +355,65 @@ h1, h2, h3, h4, p {
     .l-header-nav-menu-main a {
       color: #1d1d1d; } }
 
+.l-footer {
+  background-color: #84A9AC;
+  height: 30rem; }
+  .l-footer .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 20rem; }
+
+.l-footer-contact {
+  width: 100%;
+  max-width: 90%; }
+
+.l-footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 10rem;
+  margin: 1rem 0; }
+
+.l-footer-contact-info-mail, .l-footer-contact-info-phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%; }
+
+.l-footer-contact-info-mail-icon, .l-footer-contact-info-phone-icon {
+  flex: 0 0 10%;
+  max-width: 10%; }
+
+.l-footer-contact-info-mail-text, .l-footer-contact-info-phone-text {
+  flex: 0 0 90%;
+  max-width: 90%; }
+
+.l-footer-contact-socialmedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 6rem;
+  margin: 1rem 0; }
+
+.l-footer-contact-socialmedia-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%; }
+  .l-footer-contact-socialmedia-icons i {
+    color: #1d1d1d; }
+
+.l-footer-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 2rem 0; }
+
 .m-home-infobox {
   background-color: #204051;
   margin-top: 3rem;
@@ -436,7 +495,10 @@ h1, h2, h3, h4, p {
     padding-bottom: 1rem; }
 
 .m-home-cv-boxes {
-  text-align: center; }
+  text-align: center;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto; }
 
 .cv-box-intro span {
   font-size: 2rem;
@@ -450,7 +512,7 @@ h1, h2, h3, h4, p {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem 0;
+  margin: 2rem 0;
   border: 1px solid #3b6970;
   box-shadow: 2px 6px 7px #204051;
   border-radius: 10px; }
@@ -476,6 +538,11 @@ h1, h2, h3, h4, p {
   padding: 5rem 0 3rem 0; }
   .m-home-portfolio-intro h1 {
     padding-bottom: 1rem; }
+
+.m-home-portfolio-area {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto; }
 
 .m-home-portfolio-area-box {
   display: flex;
