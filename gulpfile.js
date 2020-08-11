@@ -16,9 +16,7 @@ function scss () {
         .pipe(sass())
 
     // 3.Autoprefixer after compiling
-        .pipe(autoprefixer({
-            browsers: 'last 3 versions'
-        }))
+        .pipe(autoprefixer())
 
     // 4. in case of error, it will only show the exact error
         .on('error', sass.logError)    
