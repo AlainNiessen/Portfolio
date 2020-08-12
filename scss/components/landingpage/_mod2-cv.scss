@@ -51,8 +51,24 @@
 }
 
 //Media Query for tablette
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
     .cv-box{
+        margin: 1rem;
+    }
+    .m-home-cv-boxes {
+        max-width: 100%;
+    }
+    .m-home-cv-box3 {
+        width: 100%;
+        max-width: 48%;
+        margin: 1rem auto 0 auto;        
+    }    
+}
+
+//Media Query for PC
+@media screen and (min-width: 992px) {
+    .m-home-cv-box3 {
+        max-width: 90%;
         margin: 1rem;
     }
 }

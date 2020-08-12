@@ -119,7 +119,7 @@
 }
 
 //Media Query for tablette
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
     .l-header-nav-menu-ham-icon {
         display: none;
     }
@@ -134,7 +134,17 @@
             display: inline-block;
         }
         a {
+            font-size: 0.75rem;
             color: map-get($map: $colors, $key: 'txt');
         }
+    }
+}
+
+//Media Query for PC
+@media screen and (min-width: 992px) {
+    .l-header-nav-menu-main {
+        a {
+            font-size: 1rem;
+        }        
     }
 }

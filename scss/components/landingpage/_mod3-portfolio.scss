@@ -74,8 +74,11 @@
 }
 
 //Media Query for tablette
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
     .m-home-portfolio-area-box {
         margin: 0.5rem;
+    }
+    .m-home-portfolio-area {
+        max-width: 100%;
     }
 }

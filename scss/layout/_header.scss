@@ -20,3 +20,21 @@
         color: map-get($map: $colors, $key: 'txt');
     }
 }
+
+//Media query for tablette
+@media screen and (min-width: 720px){
+    .l-header-logo {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+//Media query for PC
+@media screen and (min-width: 992px){
+    .l-header-logo {
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+}

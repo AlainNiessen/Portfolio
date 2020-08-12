@@ -6,20 +6,21 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 20rem;
+        height: 30rem;
     }
 }
 
 .l-footer-contact {
     width: 100%;
     max-width: 90%;
+
 }
 
 .l-footer-contact-info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     height: 10rem;
     margin: 1rem 0 ;
 }
@@ -27,25 +28,20 @@
 .l-footer-contact-info-mail, .l-footer-contact-info-phone {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
 }
 
 .l-footer-contact-info-mail-icon, .l-footer-contact-info-phone-icon {
-    flex: 0 0 10%;
-    max-width: 10%;
+    padding-right: 1rem;
 }
 
-.l-footer-contact-info-mail-text, .l-footer-contact-info-phone-text {
-    flex: 0 0 90%;
-    max-width: 90%;
-}
 
 .l-footer-contact-socialmedia {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     height: 6rem;
     margin: 1rem 0;
 }
@@ -66,4 +62,14 @@
     justify-content: center;
     align-items: center;
     margin: 4rem 0 2rem 0;
+}
+
+//Media Query for tablette
+@media screen and (min-width: 720px) {
+    .l-footer {
+        height: 20rem;
+        .wrap {
+            height: 20rem;
+        }
+    }
 }
