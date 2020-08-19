@@ -1,0 +1,1 @@
+var menuHam=document.getElementById("men-ham"),menuMain=document.getElementById("men-nav"),menuMain1=document.getElementById("main-content");null!=menuHam&&null!=menuMain?menuHam.addEventListener("click",function(e){menuMain.classList.toggle("is-active"),menuMain1.classList.toggle("is-active"),menuHam.classList.toggle("cross")}):alert("un des deux éléments pas présents");
