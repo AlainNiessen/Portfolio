@@ -5,6 +5,7 @@ var minCss = require ('gulp-clean-css');
 var rename = require('gulp-rename');
 var uglify = require ('gulp-uglify');
 var concat = require ('gulp-concat');
+var imageMin = require ('gulp-imagemin');
 
 
 //function that compile scss into css
@@ -53,8 +54,23 @@ function compress () {
         .pipe(rename({ prefix: 'min-' }))    
     
     // 5.where do I save the minimalized js?
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./dist/js'));
 
+}
+
+//function for compressing images
+function compressImg () {
+    return gulp
+
+    // 1. where is my img file?
+        .src('./src/img/*') // * for all img-files
+
+    // 2.Compress img-files
+        .pipe(imageMin())
+
+    // 3. where do I save the compressed img-files 
+        .pipe(gulp.dest('./dist/img'));   
+    
 }
 
 //watching and updating automatically
@@ -69,9 +85,11 @@ function watch () {
     gulp.watch('./src/scss/**/*.scss', scss); //compiling automatically    
     gulp.watch('./*.html').on('change', browserSync.reload); // refresh browser
     gulp.watch('./src/js/**/*.js', compress); //watching for every change in all js-files and execute function compress automatically
-    
+    gulp.watch('.src/img.*', compressImg); //watching for every changes in src-img-folder and execute compressImg function
 }
 
+//Exporting all functions
 exports.scss = scss;
 exports.compress = compress;
+exports.compressImg = compressImg;
 exports.watch = watch;
