@@ -634,3 +634,28 @@ h1, h2, h3, h4, p {
     .m-about-intro .wrap h1 {
       color: #f8f8f8;
       text-transform: uppercase; }
+
+.m-about-infobox {
+  width: 100%;
+  height: 30rem; }
+
+.m-about-infobox-img {
+  height: 100%; }
+
+.m-about-infobox-txt {
+  height: 30rem;
+  padding-top: 3rem; }
+
+.m-about-infobox-img img {
+  height: 100%; }
+
+.m-about-infobox-shaped {
+  shape-outside: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+  width: 5rem;
+  height: 30rem;
+  float: left; }
+
+.m-about-infobox-txt {
+  text-align: justify; }
+  .m-about-infobox-txt h1, .m-about-infobox-txt h2, .m-about-infobox-txt p {
+    margin: 0.5rem 0; }
