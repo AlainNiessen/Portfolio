@@ -15,3 +15,4 @@ else {
 	alert('un des deux éléments pas présents');
 
 }
+

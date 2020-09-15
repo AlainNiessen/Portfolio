@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require ('browser-sync').create();
 var minCss = require ('gulp-clean-css');
 var rename = require('gulp-rename');
-var uglify = require ('gulp-uglify');
+var uglify = require ('gulp-terser');
 var concat = require ('gulp-concat');
 var imageMin = require ('gulp-imagemin');
 
@@ -21,7 +21,7 @@ function scss () {
     // 3. in case of error, it will only show the exact error
         .on('error', sass.logError)    
 
-    // 4.where do I save the compiled css?
+    // 4.where do I save the compiled css? Lisible!
         .pipe(gulp.dest('./src/css'))    
 
     // 5. minimize css
@@ -37,7 +37,7 @@ function scss () {
         .pipe(browserSync.stream());
 }
 
-//function that minimalize JS
+//function that concat and minimalize JS
 function compress () {
     return gulp
 
@@ -45,7 +45,7 @@ function compress () {
         .src('./src/js/**/*.js')
 
     // 2.Concat all js files to one file
-        .pipe(concat('all.js'))
+        .pipe(concat('all.js'))        
 
     // 3. minify 
         .pipe(uglify())  
@@ -53,7 +53,7 @@ function compress () {
     // 4. rename
         .pipe(rename({ prefix: 'min-' }))    
     
-    // 5.where do I save the minimalized js?
+    // 5.where do I save the minimalized concat js?
         .pipe(gulp.dest('./dist/js'));
 
 }

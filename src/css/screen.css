@@ -188,7 +188,7 @@
 
 html {
   font-size: 16px;
-  font-family: 'Noto Sans SC', sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 body {
   width: 100%; }
@@ -621,41 +621,62 @@ h1, h2, h3, h4, p {
   .m-home-portfolio-area {
     max-width: 100%; } }
 
-.m-about-intro {
+.m-about {
+  margin-top: 3rem; }
+  .m-about .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.m-about-open-box {
   background-color: #84A9AC;
   background-image: linear-gradient(to right, #84A9AC, #3b6970, #84A9AC);
   height: 7rem;
-  margin-top: 3rem; }
-  .m-about-intro .wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 3rem;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%); }
+  .m-about-open-box .wrap {
     height: 7rem; }
-    .m-about-intro .wrap h1 {
+    .m-about-open-box .wrap h1 {
       color: #f8f8f8;
       text-transform: uppercase; }
 
-.m-about-infobox {
-  width: 100%;
-  height: 30rem; }
+.m-about-infobox-text {
+  margin-top: 3rem; }
+  .m-about-infobox-text h2 {
+    text-align: center;
+    padding-bottom: 2rem; }
+  .m-about-infobox-text p {
+    text-align: justify;
+    padding-bottom: 1rem; }
 
-.m-about-infobox-img {
-  height: 100%; }
+.m-about-close-box {
+  background-color: #84A9AC;
+  background-image: linear-gradient(to right, #84A9AC, #3b6970, #84A9AC);
+  height: 7rem;
+  margin-top: 3rem;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%); }
 
-.m-about-infobox-txt {
-  height: 30rem;
-  padding-top: 3rem; }
+.m-about-skills {
+  height: 50rem; }
+  .m-about-skills h1 {
+    margin: 3rem 0 2rem 0;
+    text-align: center; }
 
-.m-about-infobox-img img {
-  height: 100%; }
+.m-about-skills-container h2 {
+  text-align: center;
+  padding-bottom: 2rem; }
 
-.m-about-infobox-shaped {
-  shape-outside: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
-  width: 5rem;
-  height: 30rem;
-  float: left; }
+.m-about-skills-container p {
+  text-align: justify;
+  padding-bottom: 1rem; }
 
-.m-about-infobox-txt {
-  text-align: justify; }
-  .m-about-infobox-txt h1, .m-about-infobox-txt h2, .m-about-infobox-txt p {
-    margin: 0.5rem 0; }
+.m-about-skills-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 3rem; }
+  .m-about-skills-icons i {
+    font-size: 3rem;
+    color: #84A9AC; }
+    .m-about-skills-icons i:hover {
+      color: #204051; }
