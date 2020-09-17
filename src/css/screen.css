@@ -215,7 +215,7 @@ h4 {
   font-size: 1.2rem; }
 
 h1, h2, h3, h4, p {
-  color: #1d1d1d; }
+  color: #313131; }
 
 .btn {
   display: inline-block;
@@ -248,7 +248,7 @@ h1, h2, h3, h4, p {
     height: 3rem; }
 
 .l-header-logo h1 {
-  color: #1d1d1d; }
+  color: #313131; }
 
 @media screen and (min-width: 720px) {
   .l-header-logo h1 {
@@ -297,7 +297,7 @@ h1, h2, h3, h4, p {
   right: 0;
   height: 3px;
   width: 20px;
-  background-color: #1d1d1d;
+  background-color: #313131;
   transition: all 0.3s; }
 
 .l-header-nav-menu-ham-icon .icon::after {
@@ -306,7 +306,7 @@ h1, h2, h3, h4, p {
   bottom: -5px;
   height: 3px;
   width: 20px;
-  background-color: #1d1d1d;
+  background-color: #313131;
   transition: all 0.3s; }
 
 .l-header-nav-menu-ham-icon .icon::before {
@@ -315,7 +315,7 @@ h1, h2, h3, h4, p {
   top: -5px;
   height: 3px;
   width: 20px;
-  background-color: #1d1d1d;
+  background-color: #313131;
   transition: all 0.3s; }
 
 .l-header-nav-menu-ham-icon.cross > .icon {
@@ -362,7 +362,7 @@ h1, h2, h3, h4, p {
       display: inline-block; }
     .l-header-nav-menu-main a {
       font-size: 0.75rem;
-      color: #1d1d1d; } }
+      color: #313131; } }
 
 @media screen and (min-width: 992px) {
   .l-header-nav-menu-main a {
@@ -371,6 +371,15 @@ h1, h2, h3, h4, p {
 .l-footer {
   background-color: #84A9AC;
   height: 30rem; }
+  .l-footer p, .l-footer i, .l-footer a {
+    color: #313131; }
+  .l-footer h1 {
+    background-color: #3b6970;
+    background-image: linear-gradient(to right, #3b6970, #204051);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
   .l-footer .wrap {
     display: flex;
     flex-direction: column;
@@ -388,7 +397,7 @@ h1, h2, h3, h4, p {
   justify-content: space-around;
   align-items: center;
   height: 10rem;
-  margin: 1rem 0; }
+  margin: 3rem 0 1rem 0; }
 
 .l-footer-contact-info-mail, .l-footer-contact-info-phone {
   display: flex;
@@ -405,28 +414,28 @@ h1, h2, h3, h4, p {
   justify-content: space-around;
   align-items: center;
   height: 6rem;
-  margin: 1rem 0; }
+  margin: 3rem 0 1rem 0; }
 
 .l-footer-contact-socialmedia-icons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 30%; }
-  .l-footer-contact-socialmedia-icons i {
-    color: #1d1d1d; }
+  .l-footer-contact-socialmedia-icons i:hover {
+    color: #3b6970; }
 
 .l-footer-copyright {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 4rem 0 2rem 0; }
+  padding-bottom: 2rem; }
 
 @media screen and (min-width: 720px) {
   .l-footer {
-    height: 20rem; }
+    height: 21rem; }
     .l-footer .wrap {
-      height: 20rem; } }
+      height: 21rem; } }
 
 .m-home-infobox {
   background-color: #204051;
@@ -520,7 +529,7 @@ h1, h2, h3, h4, p {
 
 .cv-box-intro span {
   font-size: 2rem;
-  color: #1d1d1d;
+  color: #313131;
   display: block;
   padding-bottom: 1rem; }
 
@@ -584,7 +593,7 @@ h1, h2, h3, h4, p {
     margin: 1rem 0; }
     .m-home-portfolio-area-box h2 a {
       text-decoration: none;
-      color: #1d1d1d; }
+      color: #313131; }
       .m-home-portfolio-area-box h2 a:hover {
         color: #84A9AC; }
 
@@ -657,7 +666,7 @@ h1, h2, h3, h4, p {
   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%); }
 
 .m-about-skills {
-  height: 50rem; }
+  margin-bottom: 5rem; }
   .m-about-skills h1 {
     margin: 3rem 0 2rem 0;
     text-align: center; }
@@ -674,7 +683,7 @@ h1, h2, h3, h4, p {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 3rem; }
+  margin-top: 5rem; }
   .m-about-skills-icons i {
     font-size: 3rem;
     color: #84A9AC; }
