@@ -1,6 +1,7 @@
 //First module in about-page - Title Box 
 .m-about {
     margin-top: 3rem;
+    height: 100vh;
     .wrap {
         display: flex;
         justify-content: center;
@@ -11,11 +12,11 @@
 .m-about-open-box {
     background-color: map-get($map: $colors, $key: 'main2'); //For browsers that do not support gradients
     background-image: linear-gradient(to right, map-get($map: $colors, $key: 'main2'), map-get($map: $colors, $key: 'main3'), map-get($map: $colors, $key: 'main2') ); //For gradient effect  
-    height: 7rem;
+    height: 20vh;
     margin-top: 3rem;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
     .wrap {
-        height: 7rem;
+        height: 20vh;
         h1 {
             color: map-get($map: $colors, $key: 'main1');
             text-transform: uppercase;
@@ -27,6 +28,7 @@
 
 .m-about-infobox-text {
     margin-top: 3rem;
+    height: 41vh;
     h2 {
         text-align: center;
         padding-bottom: 2rem;
@@ -40,7 +42,7 @@
 .m-about-close-box {
     background-color: map-get($map: $colors, $key: 'main2'); //For browsers that do not support gradients
     background-image: linear-gradient(to right, map-get($map: $colors, $key: 'main2'), map-get($map: $colors, $key: 'main3'), map-get($map: $colors, $key: 'main2') ); //For gradient effect  
-    height: 7rem;
+    height: 20vh;
     margin-top: 3rem;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
 }

@@ -1,4 +1,4 @@
-//Second module in about-page - Skills
+//Second module in about-page - Skills and tools exertness
 .m-about-skills {
     margin-bottom: 5rem;
     h1 {
@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 5rem;
     i {
         font-size: 3rem;
@@ -33,3 +34,99 @@
     }
 }
 
+//2nd single module in about me page - tools expertness
+.m-about-tools-content {
+    margin-top: 5rem;
+    h3 {
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+}
+
+.m-about-tool-content-statistic-box {
+    display: flex;
+    flex-direction: column;
+    p {
+        align-self: center;
+    }
+}
+.m-about-tool-content-statistic-box-txt {
+    display: flex;
+    justify-content: space-between;
+    p:nth-of-type(2) {
+        border: 0.1rem solid map-get($map: $colors, $key: 'main4');
+        border-radius: 50%;
+        padding: .4rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/*Loop for different statistic strips in about-me page  
+first loop for base strip 
+second loop for statistic strip 
+if condition for individual lenght of statistic strip*/
+@for $i from 1 through 6 {
+    .m-about-tool-content-statistic-strip-#{$i} {
+        width: 100%;
+        height: .8rem;
+        border: 3px solid #eeeeef; //Color copy by using pipette on photoshop
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        margin: 1rem 0 2rem 0;
+        background-color: #dedede; //Color copy by using pipette on photoshop
+        position: relative;
+    }
+    .m-about-tool-content-statistic-strip-#{$i}::after {
+        content:"";
+        position: absolute;
+        height: 0.3rem;
+        top: .1rem;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        background-color: map-get($map: $colors, $key: 'main2'); //For browsers that do not support gradients
+        background-image: linear-gradient(to right, map-get($map: $colors, $key: 'main2'), map-get($map: $colors, $key: 'main3') ); //For gradient effect
+        @if $i==1 {
+            width: 85%;            
+        }
+        @if $i==2 {
+            width: 90%;            
+        }
+        @if $i==3 {
+            width: 40%;            
+        }
+        @if $i==4 {
+            width: 70%;            
+        }
+        @if $i==5 {
+            width: 10%;            
+        }
+        @if $i==6 {
+            width: 65%;            
+        }
+    }
+}
+.m-about-tool-content-statistic-strip-1[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-2[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-3[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-4[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-5[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-6[data-scroll="in"]::after {
+    animation: animation 3s ease-in-out;
+}
+
+@keyframes animation {
+    from {
+        width: 0;
+    }
+}
+
+//Media Query for tablette
+@media screen and (min-width: 768px) {
+    .m-about-tool-content-statistic-box {
+        margin: .6rem;
+    }
+}
