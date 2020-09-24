@@ -444,7 +444,7 @@ h1, h2, h3, h4, p {
 .m-home-infobox-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   margin-top: 3rem; }
@@ -490,7 +490,7 @@ h1, h2, h3, h4, p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 50vh; }
 
 .m-home-infobox-content-image {
