@@ -1,6 +1,7 @@
 // First module of landing-page - infobox
 .m-home-infobox {
-    background-color: map-get($map: $colors, $key: 'main4');
+    background-color: map-get($map: $colors, $key: 'main3'); //For browsers that do not support gradients
+    background-image: linear-gradient(to bottom right, map-get($map: $colors, $key: 'main3'), map-get($map: $colors, $key: 'main5')); //For gradient effect
     padding-bottom: 2rem;
     width: 100%;
 }

@@ -1,11 +1,13 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require ('browser-sync').create();
-var minCss = require ('gulp-clean-css');
-var rename = require('gulp-rename');
-var uglify = require ('gulp-terser');
-var concat = require ('gulp-concat');
-var imageMin = require ('gulp-imagemin');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require ('browser-sync').create();
+const minCss = require ('gulp-clean-css');
+const rename = require('gulp-rename');
+const uglify = require ('gulp-terser');
+const concat = require ('gulp-concat');
+const imageMin = require ('gulp-imagemin');
+const autoprefixer = require('gulp-autoprefixer');
+
 
 
 //function that compile scss into css
@@ -18,22 +20,28 @@ function scss () {
     // 2. pass that file through the sass compiler
         .pipe(sass())
 
-    // 3. in case of error, it will only show the exact error
+    // 3. Prefix css with autoprefixer
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 2 versions'],
+            cascade: false
+        }))
+
+    // 4. in case of error, it will only show the exact error
         .on('error', sass.logError)    
 
-    // 4.where do I save the compiled css? Lisible!
+    // 5.where do I save the compiled css? Lisible!
         .pipe(gulp.dest('./src/css'))    
 
-    // 5. minimize css
+    // 6. minimize css
         .pipe(minCss())
 
-    // 6. rename
+    // 7. rename
         .pipe(rename({ prefix: 'min-' }))    
     
-    // 7.where do I save the minimalized css?
+    // 8.where do I save the minimalized css?
         .pipe(gulp.dest('./dist/css'))
 
-    // 8. stream changes to all browsers / syncronize everything between different browsers / update css without refreshing browser
+    // 9. stream changes to all browsers / syncronize everything between different browsers / update css without refreshing browser
         .pipe(browserSync.stream());
 }
 
@@ -54,7 +62,10 @@ function compress () {
         .pipe(rename({ prefix: 'min-' }))    
     
     // 5.where do I save the minimalized concat js?
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/js'))
+
+    // 6. stream changes to all browsers / syncronize everything between different browsers / update css without refreshing browser
+        .pipe(browserSync.stream());
 
 }
 
@@ -63,7 +74,7 @@ function compressImg () {
     return gulp
 
     // 1. where is my img file?
-        .src('./src/img/*') // * for all img-files
+        .src('./src/img/**/*') // * for all img-files
 
     // 2.Compress img-files
         .pipe(imageMin())
@@ -85,7 +96,7 @@ function watch () {
     gulp.watch('./src/scss/**/*.scss', scss); //compiling automatically    
     gulp.watch('./*.html').on('change', browserSync.reload); // refresh browser
     gulp.watch('./src/js/**/*.js', compress); //watching for every change in all js-files and execute function compress automatically
-    gulp.watch('.src/img.*', compressImg); //watching for every changes in src-img-folder and execute compressImg function
+    gulp.watch('./src/img/**/*', compressImg); //watching for every changes in src-img-folder and execute compressImg function
 }
 
 //Exporting all functions

@@ -1,13 +1,11 @@
 .l-footer {
-    background-color: map-get($map: $colors, $key: 'main2');
+    background-color: map-get($map: $colors, $key: 'txt');
     height: 30rem;
     p, i, a {
-        color: map-get($map: $colors, $key: 'txt');
+        color: map-get($map: $colors, $key: 'main1');
     }
     h1 {
-        background-color: map-get($map: $colors, $key: 'main3'); //For browsers that do not support gradients
-        background-image: linear-gradient(to right, map-get($map: $colors, $key: 'main3'), map-get($map: $colors, $key: 'main4')); //For gradient effect
-        background-size: 100%;
+        background-color: map-get($map: $colors, $key: 'main1');        
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
