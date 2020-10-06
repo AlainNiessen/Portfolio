@@ -7,6 +7,7 @@ const uglify = require ('gulp-terser');
 const concat = require ('gulp-concat');
 const imageMin = require ('gulp-imagemin');
 const autoprefixer = require('gulp-autoprefixer');
+const newer = require('gulp-newer');
 
 
 
@@ -76,10 +77,13 @@ function compressImg () {
     // 1. where is my img file?
         .src('./src/img/**/*') // * for all img-files
 
-    // 2.Compress img-files
+    // 2. add the newer pipe to pass through newer images only
+        .pipe(newer("./dist/img"))
+
+    // 3.Compress img-files
         .pipe(imageMin())
 
-    // 3. where do I save the compressed img-files 
+    // 4. where do I save the compressed img-files 
         .pipe(gulp.dest('./dist/img'));   
     
 }
