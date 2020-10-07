@@ -467,6 +467,14 @@ h1, h2, h3, h4, p {
   -webkit-animation: animation 1s;
   animation: animation 1s; }
 
+@-webkit-keyframes animation {
+  from {
+    -webkit-transform: translate(-1000px);
+    transform: translate(-1000px); }
+  to {
+    -webkit-transform: translate(0px);
+    transform: translate(0px); } }
+
 @keyframes animation {
   from {
     -webkit-transform: translate(-1000px);
@@ -1163,18 +1171,6 @@ if condition for individual lenght of statistic strip*/
   background-image: linear-gradient(to right, #84A9AC, #20613d);
   width: 65%; }
 
-.m-about-tool-content-statistic-strip-1[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-2[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-3[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-4[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-5[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-6[data-scroll="in"]::after {
-  -webkit-animation: animation 3s ease-in-out;
-  animation: animation 3s ease-in-out; }
-
-@-webkit-keyframes animation {
-  from {
-    width: 0; } }
-
-@keyframes animation {
-  from {
-    width: 0; } }
-
 @media screen and (min-width: 768px) {
   .m-about-tool-content-statistic-box {
     margin: .6rem; } }
@@ -1222,3 +1218,100 @@ if condition for individual lenght of statistic strip*/
   .m-cv-infobox-text p {
     text-align: justify;
     padding-bottom: 1rem; }
+
+.m-cv-studies {
+  background-color: #3b6970;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#3b6970), to(#20613d));
+  background-image: linear-gradient(to bottom right, #3b6970, #20613d);
+  width: 100%;
+  height: 45rem;
+  position: relative; }
+
+.m-cv-sudies-intro {
+  text-align: center; }
+  .m-cv-sudies-intro h1 {
+    padding: 2rem 0 1rem 0;
+    text-transform: uppercase; }
+  .m-cv-sudies-intro p {
+    margin-bottom: 2rem; }
+  .m-cv-sudies-intro h1, .m-cv-sudies-intro p {
+    color: #f8f8f8; }
+
+.m-cv-studies-content {
+  position: absolute;
+  width: 20rem;
+  height: 25rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden; }
+
+#slider {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+
+.m-cv-studies-content-col {
+  width: 20rem;
+  height: 25rem;
+  text-align: center; }
+  .m-cv-studies-content-col h1:nth-child(1) {
+    display: inline-block;
+    font-size: 4rem;
+    border: 0.1rem solid #f8f8f8;
+    border-radius: 50%;
+    padding: 1rem; }
+  .m-cv-studies-content-col h1, .m-cv-studies-content-col h3, .m-cv-studies-content-col p {
+    color: #f8f8f8;
+    margin-bottom: 0.5rem; }
+
+.m-cv-studies-controller {
+  width: 20rem;
+  height: 0.3rem;
+  display: block;
+  background-color: #f8f8f8;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1rem; }
+
+#line1, #line2, #line3, #line4, #line5 {
+  display: block;
+  width: 4rem;
+  height: 0.6rem;
+  cursor: pointer;
+  -webkit-transform: translateY(-25%);
+  transform: translateY(-25%); }
+
+#active {
+  display: block;
+  width: 4rem;
+  height: 0.6rem;
+  border-radius: 1rem;
+  background-color: #204051;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-25%);
+  transform: translateY(-25%);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+
+@media screen and (min-width: 720px) {
+  .m-cv-studies-content {
+    width: 40rem; }
+  .m-cv-studies-content-col {
+    width: 40rem; }
+  .m-cv-studies-controller {
+    width: 40rem; }
+  #line1, #line2, #line3, #line4, #line5 {
+    width: 8rem; }
+  #active {
+    width: 8rem; } }

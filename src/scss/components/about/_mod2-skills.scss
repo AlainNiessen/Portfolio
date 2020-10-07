@@ -114,22 +114,7 @@ if condition for individual lenght of statistic strip*/
         }
     }
 }
-.m-about-tool-content-statistic-strip-1[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-2[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-3[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-4[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-5[data-scroll="in"]::after, .m-about-tool-content-statistic-strip-6[data-scroll="in"]::after {
-    -webkit-animation: animation 3s ease-in-out;
-            animation: animation 3s ease-in-out;
-}
 
-@-webkit-keyframes animation {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes animation {
-    from {
-        width: 0;
-    }
-}
 
 //Media Query for tablette
 @media screen and (min-width: 768px) {

@@ -1,0 +1,109 @@
+
+.m-cv-studies {
+    background-color: map-get($map: $colors, $key: 'main3'); //For browsers that do not support gradients
+    background-image: linear-gradient(to bottom right, map-get($map: $colors, $key: 'main3'), map-get($map: $colors, $key: 'main5')); //For gradient effect
+    width: 100%;
+    height: 45rem;
+    position: relative;
+}
+
+.m-cv-sudies-intro {
+    text-align: center;
+    h1 {
+        padding: 2rem 0 1rem 0;
+        text-transform: uppercase;
+    }
+    p {
+        margin-bottom: 2rem;
+    }
+    h1, p {
+        color: map-get($map: $colors, $key: 'main1');
+    }
+}
+
+.m-cv-studies-content {
+    position: absolute;
+    width: 20rem;
+    height: 25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+#slider {
+    display: inline-flex;
+    transition: 0.5s ease-in-out;
+}
+
+.m-cv-studies-content-col {
+    width: 20rem;
+    height: 25rem;
+    text-align: center;
+    h1:nth-child(1) {
+        display: inline-block;
+        font-size: 4rem;
+        border: 0.1rem solid map-get($map: $colors, $key: 'main1');
+        border-radius: 50%;
+        padding: 1rem;
+    }
+    h1, h3, p {
+        color: map-get($map: $colors, $key: 'main1');
+        margin-bottom: 0.5rem
+    }
+}
+
+.m-cv-studies-controller {
+    width: 20rem;
+    height: 0.3rem;
+    display: block;
+    background-color: map-get($map: $colors, $key: 'main1');
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    border-radius: 1rem;
+}
+
+#line1, #line2, #line3, #line4, #line5 {
+    display: block;
+    width: 4rem;
+    height: 0.6rem;
+    cursor: pointer;
+    transform: translateY(-25%);
+    
+    
+    
+}
+
+#active {
+    display: block;
+    width: 4rem;
+    height: 0.6rem;
+    border-radius: 1rem;
+    background-color: map-get($map: $colors, $key: 'main4');
+    position: absolute;
+    top: 0;
+    transform: translateY(-25%);    
+    transition: 0.5s ease-in-out;
+}
+
+//Media Query for tablette
+@media screen and (min-width: 720px) {
+    .m-cv-studies-content {        
+        width: 40rem;        
+    }
+    .m-cv-studies-content-col {
+        width: 40rem;
+    }
+    .m-cv-studies-controller {
+        width: 40rem;
+    }
+    #line1, #line2, #line3, #line4, #line5 {
+        width: 8rem;
+    } 
+    #active {
+        width: 8rem;
+    }
+}
