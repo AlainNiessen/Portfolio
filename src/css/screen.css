@@ -390,7 +390,7 @@ h1, h2, h3, h4, p {
   background-color: black;
   left: 0;
   top: 0;
-  width: 75%;
+  width: 65%;
   height: 100vh;
   opacity: 0.9;
   z-index: 99999; }
@@ -444,7 +444,7 @@ h1, h2, h3, h4, p {
   transition: all 0.3s; }
 
 .l-header-nav-menu-ham-icon.cross > .icon {
-  background-color: #f8f8f8;
+  background-color: transparent;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s; }
 
@@ -464,8 +464,8 @@ h1, h2, h3, h4, p {
 
 .l-header-nav-menu-main.is-active {
   display: block;
-  -webkit-animation: animation 1s;
-  animation: animation 1s; }
+  -webkit-animation: animation .3s;
+  animation: animation .3s; }
 
 @-webkit-keyframes animation {
   from {
@@ -1270,39 +1270,37 @@ if condition for individual lenght of statistic strip*/
 
 .m-cv-studies-controller {
   width: 20rem;
-  height: 0.3rem;
+  height: 2rem;
   display: block;
-  background-color: #f8f8f8;
   position: absolute;
-  bottom: 15%;
+  bottom: 12%;
   left: 50%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-radius: 1rem; }
 
 #line1, #line2, #line3, #line4, #line5 {
   display: block;
-  width: 4rem;
-  height: 0.6rem;
-  cursor: pointer;
-  -webkit-transform: translateY(-25%);
-  transform: translateY(-25%); }
+  width: 8%;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  cursor: pointer; }
 
 #active {
   display: block;
-  width: 4rem;
-  height: 0.6rem;
-  border-radius: 1rem;
+  width: 8%;
+  height: 1.5rem;
+  border-radius: 50%;
   background-color: #204051;
   position: absolute;
-  top: 0;
-  -webkit-transform: translateY(-25%);
-  transform: translateY(-25%);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out; }
+  top: 0; }
 
 @media screen and (min-width: 720px) {
   .m-cv-studies-content {
@@ -1310,8 +1308,7 @@ if condition for individual lenght of statistic strip*/
   .m-cv-studies-content-col {
     width: 40rem; }
   .m-cv-studies-controller {
-    width: 40rem; }
-  #line1, #line2, #line3, #line4, #line5 {
-    width: 8rem; }
-  #active {
-    width: 8rem; } }
+    width: 40rem;
+    bottom: 15%; }
+  #line1, #line2, #line3, #line4, #line5, #active {
+    height: 2.7rem; } }
