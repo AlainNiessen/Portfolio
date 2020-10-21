@@ -1,0 +1,53 @@
+.m-cv-pro-intro {
+    text-align: center;
+    h1 {
+        padding: 2rem 0 1rem 0;
+        text-transform: uppercase;
+    }
+    p {
+        margin-bottom: 2rem;
+    }
+    h1, p {
+        color: map-get($map: $colors, $key: 'main4');
+    }
+}
+.m-cv-pro-content {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.m-cv-pro-content-jobbox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    text-align: center;
+    padding: 1rem 0.5rem 0 0.5rem;
+    border-left: solid 0.2rem map-get($map: $colors, $key: 'main4');
+    border-right: solid 0.2rem map-get($map: $colors, $key: 'main4');
+    h1, h2, h3, p {
+        margin-bottom: 1rem;
+        color: map-get($map: $colors, $key: 'main4');
+    }
+    h2 {
+        padding: 0 0.2rem;
+        border-left: solid 0.1rem map-get($map: $colors, $key: 'main4');
+        border-right: solid 0.1rem map-get($map: $colors, $key: 'main4');
+    }
+    &:nth-of-type(1) {
+        margin-top: 5rem;
+    }
+    &::after {
+        content:'';
+        position: absolute;
+        width: 50%;
+        height: 0.2rem;
+        background-color: map-get($map: $colors, $key: 'main4');
+        top: 100%;
+        left: 50%;
+        transform: translate( -50%);
+    }
+}

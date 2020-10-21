@@ -1312,3 +1312,58 @@ if condition for individual lenght of statistic strip*/
     bottom: 15%; }
   #line1, #line2, #line3, #line4, #line5, #active {
     height: 2.7rem; } }
+
+.m-cv-pro-intro {
+  text-align: center; }
+  .m-cv-pro-intro h1 {
+    padding: 2rem 0 1rem 0;
+    text-transform: uppercase; }
+  .m-cv-pro-intro p {
+    margin-bottom: 2rem; }
+  .m-cv-pro-intro h1, .m-cv-pro-intro p {
+    color: #204051; }
+
+.m-cv-pro-content {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto; }
+
+.m-cv-pro-content-jobbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  text-align: center;
+  padding: 1rem 0.5rem 0 0.5rem;
+  border-left: solid 0.2rem #204051;
+  border-right: solid 0.2rem #204051; }
+  .m-cv-pro-content-jobbox h1, .m-cv-pro-content-jobbox h2, .m-cv-pro-content-jobbox h3, .m-cv-pro-content-jobbox p {
+    margin-bottom: 1rem;
+    color: #204051; }
+  .m-cv-pro-content-jobbox h2 {
+    padding: 0 0.2rem;
+    border-left: solid 0.1rem #204051;
+    border-right: solid 0.1rem #204051; }
+  .m-cv-pro-content-jobbox:nth-of-type(1) {
+    margin-top: 5rem; }
+  .m-cv-pro-content-jobbox::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 0.2rem;
+    background-color: #204051;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%); }

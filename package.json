@@ -4,7 +4,7 @@
   "description": "My Portfolio Project",
   "main": "index.js",
   "devDependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/AlainNiessen/Portfolio/issues"
   },
-  "homepage": "https://github.com/AlainNiessen/Portfolio#readme"
+  "homepage": "https://github.com/AlainNiessen/Portfolio#readme",
+  "dependencies": {
+    "object-path": "^0.11.5"
+  }
 }
