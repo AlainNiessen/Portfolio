@@ -1,0 +1,161 @@
+.m-portfolio {
+    background-color: map-get($map: $colors, $key: 'main3'); 
+    scroll-margin-top: 4.5rem;     
+    h1, h3 {                 
+        text-align: center;
+        color: map-get($map: $colors, $key: 'main1');          
+    }
+    h1 {
+        font-size: 3rem;
+        padding-top: 2rem;  
+    }  
+    h3 {
+        margin: 1rem 0;
+        font-size: 1.3rem;
+    }
+    .m-portfolio-projects {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+} 
+
+.m-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: map-get($map: $colors, $key: "main1");    
+    width: 100%;
+    max-width: 80%;
+    margin: 0.5rem auto 2rem auto;
+    height: 20rem;
+    .m-project-illustration {
+        cursor: pointer;
+        width: 15rem;
+        height: 10rem;
+        border-radius: 0.4rem;
+        display: block;
+        position: relative; //For place icon in absolute
+        background-color: map-get($map: $colors, $key: 'main2'); 
+        a {
+            padding: 0;
+        }        
+        .m-project-illustration-img {
+            img {
+                border-radius: 0.4rem;
+                width: 100%;
+                height: 100%;
+                display: block; //to fill all the box, otherwhise there is a little marge on the bottom!!!    
+            }
+        }
+        //Icon glasses unvisible
+        .m-project-illustration-icon {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }         
+        &:hover {
+            .m-project-illustration-img {
+                img {
+                    opacity: .2;
+                }
+            }
+            .m-project-illustration-icon {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+    h3 {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        a {
+            cursor: pointer;
+            color: map-get($map: $colors, $key: "main1");         
+            &:hover {
+                font-weight: 500;
+                color: map-get($map: $colors, $key: "main2");
+            }
+        }
+    }
+    .m-project-code {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        a {         
+            background-color: map-get($map: $colors, $key: 'main1');
+            color: map-get($map: $colors, $key: 'main3');
+            border: 0.05rem solid map-get($map: $colors, $key: 'main3');
+            border-radius: 0.4rem;                      
+    
+            &:hover {
+                background-color: map-get($map: $colors, $key: 'main2');
+                color: map-get($map: $colors, $key: 'main1');
+            }
+        }
+    }
+}
+//media query
+
+@media screen and (min-width: 350px) {
+    .m-project {    
+        .m-project-illustration {
+            width: 20rem;
+            height: 12rem;
+        }        
+    }
+}    
+@media screen and (min-width: 600px) {
+    .m-project { 
+        height: 23rem;   
+        .m-project-illustration {
+            width: 26rem;
+            height: 15rem;
+        }        
+    }
+}    
+
+//media query
+//Media Query for smartpkone => tablette
+@media screen and (min-width: 768px) {
+    .m-project {        
+        .m-project-illustration {
+            width: 18rem;
+            height: 12rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+}    
+//Media Query for tablette => pc
+@media screen and (min-width: 992px) {
+    .m-portfolio {
+        height: auto;
+    } 
+    .m-project {
+        .m-project-illustration {
+            width: 16rem;            
+        }        
+    }
+}
+
+//Media Query for pc => ...
+@media screen and (min-width: 1200px) {    
+    .m-project {   
+        .m-project-illustration {
+            width: 20rem;
+            
+        }
+    }
+}
+
+ 
