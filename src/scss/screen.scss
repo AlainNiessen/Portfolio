@@ -1,0 +1,15 @@
+//import base scss
+@import "base/variables";
+@import "base/grid";
+@import "base/base";
+
+//layout import
+@import "layout/header";
+@import "layout/menu";
+@import "layout/footer";
+
+//component import
+@import "components/m-intro";
+@import "components/m-aboutme";
+@import "components/m-portfolio";
+@import "components/m-contact";

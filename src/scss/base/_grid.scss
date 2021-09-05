@@ -1,0 +1,34 @@
+//Selfmade Grid-System inspired by Bootstrap
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        flex: 0 0 ((100% / $grid-columns) * $i);
+        max-width: (100% / $grid-columns) * $i;
+    }
+}
+
+@each $screen, $size in $screen-sizes {
+    @media screen and (min-width: $size) {
+        .col-#{$screen} {
+            flex-grow: 1;
+            flex-basis: 0;
+            max-width: 100%;
+        }
+        @for $i from 1 through $grid-columns {
+            .col-#{$screen}-#{$i} {
+                flex: 0 0 ((100% / $grid-columns) * $i);
+                max-width: (100% / $grid-columns) * $i;
+            }
+        }
+    }
+}

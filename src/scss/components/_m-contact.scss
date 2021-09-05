@@ -1,0 +1,143 @@
+.m-contact {
+    background-color: map-get($map: $colors, $key: 'main1');
+    scroll-margin-top: 4.5rem;
+    position: relative;
+    height: auto; 
+    h1 { 
+        font-size: 3rem;                
+        font-weight: 300;
+        text-align: center;
+        color: map-get($map: $colors, $key: 'main2');
+        padding-top: 2rem;          
+    }
+    
+    .m-contactForm {         
+        h2 {
+            font-size: 2rem;
+            text-align:center;
+            color: map-get($map: $colors, $key: 'main2');
+            margin: 2rem 0 1rem 0;                       
+        }
+        p {
+            font-size: 0.9rem;
+            width: 100%;
+            max-width: 50%;
+            margin: 1rem auto;
+            text-align:center;
+            color: map-get($map: $colors, $key: 'main2');
+        }
+        .m-formContact {
+            display: flex;                   
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            max-width: 80%;
+            margin: 2rem auto;            
+            div {
+                width: 100%;
+                text-align: center;
+                position: relative; //for check icon
+                margin-bottom: 0.5rem;
+                input::placeholder, textarea::placeholder {
+                    color: map-get($map: $colors, $key: 'main2');                        
+                }
+                input, textarea {
+                    width: 80%;
+                    border: 0.1rem solid map-get($map: $colors, $key: 'main2');
+                    border-radius: 0.4rem; 
+                    padding: 0.5rem;                      
+                }
+                input {                        
+                    height: 2rem;                                              
+                }
+                textarea {
+                    height: 10rem; 
+                    font-family: 'Roboto', sans-serif;                        
+                }
+                p {
+                    width: 80%;
+                    font-size: 0.8rem;
+                    margin: 0.5rem auto 0.3rem auto;
+                    color:red;
+                    display: none;
+                }                                           
+            }
+            button {
+                cursor: pointer;
+                width: 100%;
+                max-width: 50%;
+                margin: 0 auto;
+                padding: 0.5rem 2rem;
+                background-color: map-get($map: $colors, $key: 'main1');
+                color: map-get($map: $colors, $key: 'main2');
+                border: 0.05rem solid map-get($map: $colors, $key: 'main2');
+                border-radius: 0.5rem;                        
+        
+                &:hover {
+                    background-color: map-get($map: $colors, $key: 'main2');
+                    color: map-get($map: $colors, $key: 'main1');
+                }
+                
+            }
+            .messageResultat {
+                position: absolute;
+                display: none;
+                width: 20rem;
+                height: auto;              
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: map-get($map: $colors, $key: 'main1');
+                border-radius: 0.4rem;
+                z-index: 99999;
+                font-size: 3rem;
+                .messageResultatContent {
+                    padding-top: 2rem;
+                    width: inherit;
+                    height: inherit;
+                    p {
+                        display: block;
+                        font-size: 1.1rem;
+                    }
+                }
+            }                   
+        }
+    }
+          
+}
+
+//media query
+//Media Query for smartphone => tablette
+@media screen and (min-width: 768px) {
+    .m-contact {  
+        height: 100%;
+        padding-bottom: 2rem;         
+        h1 {
+            margin-bottom: 2rem;
+        }    
+        .m-contactForm {
+            .m-formContact {
+                max-width: 60%;
+                button {
+                    max-width: 40%;
+                }
+            }
+            
+        }                   
+    }
+}
+
+
+//media query
+//Media Query for pc
+@media screen and (min-width: 992px) {
+    .m-contact {                       
+        .m-contactForm {
+            .m-formContact {
+                max-width: 40%;                
+            }
+        }                  
+    }
+}
